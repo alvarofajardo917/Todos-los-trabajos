@@ -26,7 +26,7 @@ console.log(carrito);
 // let item = {nombre:'Leche', cantidad:1}
 // console.log("Item: " + item.nombre);
 // console.log("Cantidad: " + item.cantidad);
-
+/*
 let item =[{nombre:'Leche', cantidad:2 , precio:7.5},
                 {nombre:'carne', cantidad:2 , precio:13.6},
                 {nombre:'fideo', cantidad:2 , precio:6.5},
@@ -70,3 +70,61 @@ console.log("Total  " + item[3].cantidad * item[3].precio);
  console.log("precio " + item[4].precio);
  console.log("Total  " + item[4].cantidad * item[4].precio);
 // console.log(item);
+*/
+/*
+let carrito = [
+    { nombre: 'Leche', cantidad: 2, precio: 7.5 },
+    { nombre: 'carne', cantidad: 3, precio: 8.6 },
+    { nombre: 'fideo', cantidad: 1, precio: 6.5 },
+    { nombre: 'papa', cantidad: 4, precio: 5 }
+];
+
+let item = { nombre: 'arroz', cantidad: 2, precio: 30.5 };//anade un elemento
+
+carrito.push(item);
+*/
+// console.log(carrito);
+
+//Buscar funciones o procesos para ordenar un ARRAY
+//PRIMER FORMA
+
+/*
+console.log("Impresion por precio");
+
+carrito.sort(function(b, a) {
+    return b.precio - a.precio;
+});
+
+console.log(carrito);
+
+console.log("Impresion por nombre");
+
+let carrito2 = [
+    { nombre: 'Leche', cantidad: 2, precio: 7.5 },
+    { nombre: 'carne', cantidad: 3, precio: 8.6 },
+    { nombre: 'fideo', cantidad: 1, precio: 6.5 },
+    { nombre: 'papa', cantidad: 4, precio: 5 }
+];
+// //SEGUNDA FORMA
+carrito2.sort((a,b)=>a.nombre.localeCompare(b.nombre));
+console.log(carrito2);
+*/
+
+let carrito = [
+    { nombre: 'Leche', cantidad: 2, precio: 7.5 },
+    { nombre: 'carne', cantidad: 3, precio: 8.6 },
+    { nombre: 'fideo', cantidad: 1, precio: 6.5 },
+    { nombre: 'papa', cantidad: 4, precio: 5 }
+];
+
+let item = { nombre: 'arroz', cantidad: 2, precio: 30.5 };//anade un elemento
+
+carrito.push(item);
+
+console.log("impresion ordenada por precio");
+let carritoOrdenadoPorPrecio = carrito.slice().sort((a,b)=> a.precio - b.precio);
+console.log(carritoOrdenadoPorPrecio);
+
+console.log("impresion ordenada por nombre");
+let carritoOrdenadoPorNombre = carrito.slice().sort((a,b)=> a.nombre.localeCompare(b.nombre));
+console.log(carritoOrdenadoPorNombre);
