@@ -1,0 +1,83 @@
+<!-- 1Generar los 3 botones, y mostrar 3 formularios
+
+2- Formulario de registrio de alumnos
+
+3 Nombre, direccion, telefono.
+
+4- Formulario de notas
+
+5- Alumno, materia y nota.
+
+6- Formulario materias
+
+7-- Codigo de materia, nombre y semestre
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <!-- Botones -->
+    <button onclick="mostrarFormulario('registro_alumnos')">Formulario de Registro de Alumnos</button>
+    <button onclick="mostrarFormulario('notas')">Formulario de Notas</button>
+    <button onclick="mostrarFormulario('materias')">Formulario de Materias</button>
+
+    <!-- Formulario de Registro de Alumnos -->
+    <div id="registro_alumnos" style="display: none;">
+        <h2>Formulario de Registro de Alumnos</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion"><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Formulario de Notas -->
+    <div id="notas" style="display: none;">
+        <h2>Formulario de Notas</h2>
+        <form>
+            <label for="alumno">Alumno:</label>
+            <input type="text" id="alumno" name="alumno"><br><br>
+            <label for="materia">Materia:</label>
+            <input type="text" id="materia" name="materia"><br><br>
+            <label for="nota">Nota:</label>
+            <input type="text" id="nota" name="nota"><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Formulario de Materias -->
+    <div id="materias" style="display: none;">
+        <h2>Formulario de Materias</h2>
+        <form>
+            <label for="codigo">Código de Materia:</label>
+            <input type="text" id="codigo" name="codigo"><br><br>
+            <label for="nombre_materia">Nombre de la Materia:</label>
+            <input type="text" id="nombre_materia" name="nombre_materia"><br><br>
+            <label for="semestre">Semestre:</label>
+            <input type="text" id="semestre" name="semestre"><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        function mostrarFormulario(formularioId) {
+            // Ocultar todos los formularios
+            var formularios = document.getElementsByTagName("div");
+            for (var i = 0; i < formularios.length; i++) {
+                formularios[i].style.display = "none";
+            }
+            // Mostrar el formulario deseado
+            document.getElementById(formularioId).style.display = "block";
+        }
+    </script>
+</body>
+</html>
