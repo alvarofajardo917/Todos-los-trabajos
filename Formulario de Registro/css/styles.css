@@ -1,0 +1,10 @@
+/* Estilos personalizados para el contenedor */
+.container {
+    max-width: 600px; /* Establece el ancho máximo del contenedor */
+}
+
+/* Estilos personalizados para las celdas de encabezado y datos de la tabla */
+.table th,
+.table td {
+    vertical-align: middle; /* Alinea verticalmente el contenido de las celdas */
+}
